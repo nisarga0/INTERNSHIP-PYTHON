@@ -1,0 +1,62 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "c1770920",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[(9, 1), (6, 7), (7, 2), (0, 0), (8, 7), (18, 0)]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def convert_to_positive_coords(coords):\n",
+    "    min_x = min(coord[0] for coord in coords)\n",
+    "    min_y = min(coord[1] for coord in coords)\n",
+    "    \n",
+    "\n",
+    "    positive_coords = [(coord[0] - min_x, coord[1] - min_y) for coord in coords]\n",
+    "    \n",
+    "    return positive_coords\n",
+    "\n",
+    "coords = [(1,-2), (-2, 4), (-1,-1),(-8, -3), (0, 4), (10,-3)]\n",
+    "positive_coords = convert_to_positive_coords(coords)\n",
+    "print(positive_coords)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5b8de7c5",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
